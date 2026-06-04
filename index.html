@@ -1,0 +1,1435 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Елизавета Медведева | Финансы, аналитика, стратегия</title>
+  <meta name="description" content="Персональная страница Елизаветы Медведевой: финансы, бизнес-аналитика, стратегия, исследования и публикации.">
+  <meta property="og:title" content="Елизавета Медведева | Финансы, аналитика, стратегия">
+  <meta property="og:description" content="Digital business card молодого специалиста в финансах, аналитике, стратегии и бизнес-исследованиях.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/photo1.jpg">
+  <link rel="icon" href="assets/favicon.png">
+  <style>
+    :root {
+      --bg: #f7f4ee;
+      --paper: #fffdf8;
+      --ink: #171717;
+      --muted: #6d6a63;
+      --line: rgba(23, 23, 23, 0.12);
+      --accent: #183a37;
+      --accent-2: #a8793d;
+      --soft: #ece6da;
+      --shadow: 0 24px 70px rgba(31, 28, 22, 0.10);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      letter-spacing: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+        linear-gradient(rgba(23, 23, 23, 0.026) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black, transparent 70%);
+      z-index: -1;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    section { scroll-margin-top: 96px; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 244, 238, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--accent);
+      font-size: 13px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      padding: 10px 12px;
+      border-radius: 999px;
+      transition: color .2s ease, background .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--ink);
+      background: rgba(24, 58, 55, 0.08);
+    }
+
+    .lang-switch {
+      position: relative;
+      margin-left: 8px;
+    }
+
+    .lang-button {
+      min-height: 40px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 248, .72);
+      color: var(--ink);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .lang-menu {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 8px);
+      display: none;
+      min-width: 130px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .lang-menu.open { display: grid; }
+
+    .lang-menu button {
+      padding: 9px 10px;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .lang-menu button:hover,
+    .lang-menu button.active {
+      background: rgba(24, 58, 55, .08);
+    }
+
+    .menu-button {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      background: transparent;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .menu-button span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      background: var(--ink);
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: calc(100svh - 72px);
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 56px;
+      align-items: center;
+      padding: 72px 0 48px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--accent-2);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(52px, 7vw, 104px);
+      line-height: .94;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 700px;
+      font-size: clamp(20px, 2.4vw, 30px);
+      line-height: 1.28;
+      color: #2b2a27;
+      margin-bottom: 22px;
+    }
+
+    .sublead {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions,
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: rgba(255, 253, 248, .72);
+      font-size: 14px;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(31, 28, 22, .10);
+      background: var(--paper);
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .hero-media {
+      position: relative;
+      min-height: 640px;
+      display: grid;
+      align-items: end;
+    }
+
+    .portrait {
+      height: min(72svh, 760px);
+      min-height: 540px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--soft);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 38%;
+      filter: saturate(.96) contrast(1.02);
+    }
+
+    .stat-strip {
+      position: absolute;
+      left: -28px;
+      bottom: 32px;
+      width: min(380px, 88%);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      background: rgba(255, 253, 248, .92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 45px rgba(31, 28, 22, .12);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1;
+      color: var(--accent);
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .section {
+      padding: 92px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    .section-kicker {
+      color: var(--accent-2);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    h2 {
+      margin-bottom: 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4.2vw, 58px);
+      line-height: 1.02;
+      font-weight: 500;
+    }
+
+    .section-copy {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(255, 253, 248, .76);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(31, 28, 22, .04);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 12px 0 0;
+    }
+
+    li + li { margin-top: 8px; }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 112px;
+      top: 14px;
+      bottom: 14px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .job {
+      position: relative;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .year {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 15px;
+      padding-top: 26px;
+    }
+
+    .job-card {
+      position: relative;
+      background: rgba(255, 253, 248, .78);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .job-card::before {
+      content: "";
+      position: absolute;
+      left: -37px;
+      top: 30px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 0 8px var(--bg);
+    }
+
+    .job-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(168, 121, 61, .45);
+    }
+
+    .job-card h3 { margin-bottom: 6px; }
+    .role {
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 248, .68);
+      color: #383631;
+      font-size: 14px;
+    }
+
+    .context-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .context-gallery.research {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .context-photo {
+      position: relative;
+      min-height: 260px;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--soft);
+    }
+
+    .context-gallery.research .context-photo {
+      aspect-ratio: 5 / 4;
+      min-height: 340px;
+    }
+
+    .context-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .context-photo .caption {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      padding: 10px 12px;
+      color: #fff;
+      border-radius: var(--radius);
+      background: rgba(23, 23, 23, .56);
+      font-size: 12px;
+      line-height: 1.35;
+      backdrop-filter: blur(8px);
+    }
+
+    .degree-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .degree-meta span + span::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      vertical-align: middle;
+    }
+
+    .international-stack {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .program-card {
+      display: grid;
+      grid-template-columns: minmax(260px, .9fr) minmax(320px, 1.1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .program-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .program-country {
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .program-photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .program-photos .context-photo {
+      min-height: 260px;
+    }
+
+    .degree-with-photo {
+      display: grid;
+      grid-template-columns: 1fr minmax(220px, .72fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .degree-with-photo .context-photo {
+      min-height: 320px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-item span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-item strong {
+      text-align: right;
+      word-break: break-word;
+    }
+
+    .qr {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      gap: 14px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .qr img {
+      width: 190px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .publication-list details {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 248, .76);
+      overflow: hidden;
+    }
+
+    .publication-list summary {
+      cursor: pointer;
+      padding: 18px 20px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .publication-list ol {
+      margin: 0;
+      padding: 0 22px 20px 42px;
+    }
+
+    .publication-list a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: rgba(168, 121, 61, .5);
+      text-underline-offset: 4px;
+    }
+
+    footer {
+      padding: 36px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 940px) {
+      .menu-button { display: block; }
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 20px;
+        right: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .nav-links.open { display: flex; }
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-top: 48px;
+      }
+      .hero-media { min-height: auto; }
+      .portrait {
+        height: 520px;
+        min-height: 520px;
+      }
+      .stat-strip {
+        position: static;
+        width: 100%;
+        margin-top: 14px;
+      }
+      .section-head,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+      .grid-3,
+      .grid-2,
+      .context-gallery,
+      .context-gallery.research,
+      .program-card,
+      .program-photos {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap,
+      .nav {
+        width: min(100% - 28px, var(--max));
+      }
+      .section { padding: 64px 0; }
+      h1 { font-size: 48px; }
+      .lead { font-size: 20px; }
+      .timeline::before { left: 8px; }
+      .job {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding-left: 28px;
+      }
+      .year { padding-top: 0; }
+      .job-card::before {
+        left: -26px;
+        top: 28px;
+      }
+      .contact-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .contact-item strong { text-align: left; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <!-- EDIT: замените изображения в папке assets на финальные фотографии с теми же именами файлов. -->
+  <header class="topbar">
+    <nav class="nav" aria-label="Основная навигация">
+      <a class="brand" href="#top" aria-label="Наверх">
+        <span class="brand-mark">EM</span>
+        <span>Елизавета Медведева</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-i18n="navAbout">Обо мне</a>
+        <a href="#experience" data-i18n="navExperience">Опыт</a>
+        <a href="#education" data-i18n="navEducation">Образование</a>
+        <a href="#publications" data-i18n="navPublications">Публикации</a>
+        <a href="#contact" data-i18n="navContact">Контакты</a>
+        <div class="lang-switch">
+          <button class="lang-button" type="button" aria-expanded="false" aria-label="Выбрать язык">RU</button>
+          <div class="lang-menu" aria-label="Выбор языка">
+            <button type="button" data-lang-option="ru" class="active">Русский</button>
+            <button type="button" data-lang-option="en">English</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="wrap">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="eyebrow">Finance | Analytics | Strategy</p>
+          <h1 data-i18n="personName">Елизавета Медведева</h1>
+          <p class="lead" data-i18n="lead">Ведущий специалист на стыке аналитики, внедрения технологий, финансов и бизнес-исследований.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact" data-i18n="navContact">Контакты</a>
+            <a class="btn" href="#about" data-i18n="navAbout">Обо мне</a>
+            <a class="btn" href="#experience" data-i18n="navExperience">Опыт</a>
+            <a class="btn" href="#education" data-i18n="navEducation">Образование</a>
+            <a class="btn" href="#publications" data-i18n="navPublications">Публикации</a>
+          </div>
+        </div>
+        <div class="hero-media reveal">
+          <div class="portrait">
+            <img src="assets/photo1.jpg" alt="Портрет Елизаветы Медведевой">
+          </div>
+          <div class="stat-strip" aria-label="Ключевые факты">
+            <div class="stat"><strong>2025-2027</strong><span data-i18n="statMaster">магистратура в Финансовом университете</span></div>
+            <div class="stat"><strong>2026</strong><span data-i18n="statRole">ведущий специалист в Газпромбанке</span></div>
+            <div class="stat"><strong data-i18n="statEsgTitle">ESG и инноватика</strong><span data-i18n="statEsg">исследования и публикации</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-kicker">01 | About</div>
+          <div></div>
+        </div>
+        <div class="grid-3">
+          <article class="card reveal">
+              <h3 data-i18n="interestsTitle">Профессиональные интересы</h3>
+              <p data-i18n="interestsText">Финансовый анализ, бизнес-аналитика, стратегия, корпоративные финансы, ESG, инноватика, технологические решения и высокотехнологичные компании.</p>
+          </article>
+          <article class="card reveal">
+              <h3 data-i18n="strengthsTitle">Сильные стороны</h3>
+              <p data-i18n="strengthsText">Структурирование данных, аккуратная визуализация выводов, исследовательская логика, работа с международной повесткой и сложными материалами.</p>
+          </article>
+          <article class="card reveal">
+              <h3 data-i18n="styleTitle">Рабочий стиль</h3>
+              <p data-i18n="styleText">Системный подход, внимание к деталям, умение соединять финансовую, стратегическую и коммуникационную части проекта.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-kicker">02 | Experience</div>
+          <div></div>
+        </div>
+        <div class="timeline">
+          <article class="job reveal">
+            <div class="year">2026-н.в.</div>
+            <div class="job-card">
+              <h3 data-i18n="gpbTitle">АО «Газпромбанк»</h3>
+              <div class="role" data-i18n="gpbRole">Департамент аналитики и внедрения технологий, Центр развития технологических проектов, ведущий специалист</div>
+              <ul>
+                <li data-i18n="gpbPoint1">Участие в поиске технологических решений под запрос бизнес-заказчиков Банка: скаутинг</li>
+                <li data-i18n="gpbPoint2">Участие в отборе и оценке решений для пилотирования в Банке</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job reveal">
+            <div class="year">2025</div>
+            <div class="job-card">
+              <h3 data-i18n="cityTitle">ООО «Городские события»</h3>
+              <div class="role" data-i18n="cityRole">Бизнес-ассистирование компаний перспективного портфеля Фонда НТИ</div>
+              <ul>
+                <li data-i18n="cityPoint1">Структуризация данных, формирование выводов и визуальное оформление аналитических отчетов по компаниям программы акселерации в рамках Архипелага 2025</li>
+                <li data-i18n="cityPoint2">Помощь в составлении финансовой модели, бизнес-модели, требований и условий Фонда, дорожной карты и презентационных материалов для инвестфорума</li>
+                <li data-i18n="cityPoint3">Организация нетворкинга компаний, проектировочных и пленарных сессий</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job reveal">
+            <div class="year">2023-2025</div>
+            <div class="job-card">
+              <h3>Финансовый университет при Правительстве РФ</h3>
+              <div class="role">Институт исследований</div>
+              <ul>
+                <li data-i18n="fuPoint1">Составление отчета и апробация исследования «Форсайт-технологии в воспитательных практиках»</li>
+                <li data-i18n="fuPoint2">Составление отчета и апробация исследования «Оценка уровня раскрытия ESG для компаний»</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job reveal">
+            <div class="year">2022</div>
+            <div class="job-card">
+              <h3>H2 Инвест</h3>
+              <div class="role">Стажировка, Отдел проектного управления</div>
+              <ul>
+                <li data-i18n="h2Point1">Ведение проектной документации: разработка устава проекта, подготовка презентаций</li>
+                <li data-i18n="h2Point2">Формирование mind map для структуризации ресурсов и вех проекта</li>
+                <li data-i18n="h2Point3">Создание системы контроля и выполнения сроков</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job reveal">
+            <div class="year">2019</div>
+            <div class="job-card">
+              <h3>IB Translations</h3>
+              <div class="role">Стажировка, финансовый перевод для компаний и инвестбанков</div>
+              <ul>
+                <li data-i18n="ibPoint1">Запись и редакция письменных материалов с международных конференций</li>
+                <li data-i18n="ibPoint2">Дизайн иностранных материалов в MS Word</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-kicker">03 | Education</div>
+          <div>
+            <h2 data-i18n="educationTitle">Финансовое образование с международным контуром</h2>
+          </div>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+              <h3 data-i18n="financialUniversity">Финансовый университет при Правительстве Российской Федерации</h3>
+            <p class="degree-meta"><span>2025-2027</span><span data-i18n="master">Магистратура</span></p>
+            <ul>
+              <li data-i18n="masterFaculty">Факультет налогов, аудита и бизнес-анализа</li>
+              <li data-i18n="masterProgram">Программа: «Анализ и стратегический менеджмент в бизнесе»</li>
+            </ul>
+          </article>
+          <article class="card reveal degree-with-photo">
+            <div>
+            <h3 data-i18n="financialUniversity">Финансовый университет при Правительстве Российской Федерации</h3>
+            <p class="degree-meta"><span>2021-2025</span><span data-i18n="bachelor">Бакалавриат</span></p>
+            <ul>
+              <li data-i18n="bachelorFaculty">Факультет экономики и бизнеса</li>
+              <li data-i18n="bachelorProgram">Программа: «Корпоративные финансы и бизнес-аналитика» с частичной реализацией на английском языке</li>
+            </ul>
+            </div>
+            <figure class="context-photo">
+              <img src="assets/education-diploma.png" alt="Елизавета Медведева с дипломом у Финансового университета">
+            </figure>
+          </article>
+        </div>
+        <div class="international-stack">
+          <article class="card program-card reveal">
+            <div>
+              <h3>Stipendium Hungaricum</h3>
+              <p class="program-country">2023-2024 · Hungary 🇭🇺</p>
+              <ul>
+                <li>University of Debrecen, Faculty of Economics and Business, BA</li>
+              </ul>
+            </div>
+            <div class="program-photos" aria-label="Фотографии University of Debrecen">
+              <figure class="context-photo">
+                <img src="assets/education-debrecen.jpg" alt="Елизавета Медведева у здания University of Debrecen">
+                <figcaption class="caption">University of Debrecen, Hungary</figcaption>
+              </figure>
+              <figure class="context-photo">
+                <img src="assets/education-budapest.jpg" alt="Елизавета Медведева в Будапеште">
+              </figure>
+            </div>
+          </article>
+
+          <article class="card program-card reveal">
+            <div>
+              <h3>Exchange program in Alliance University</h3>
+              <p class="program-country">2024 · India 🇮🇳</p>
+              <ul>
+                <li>Alliance University, BBA, Bangalore</li>
+              </ul>
+            </div>
+            <div class="program-photos" aria-label="Фотографии Alliance University">
+              <figure class="context-photo">
+                <img src="assets/education-alliance.jpg" alt="Елизавета Медведева в Alliance University">
+                <figcaption class="caption">Alliance University, India</figcaption>
+              </figure>
+              <figure class="context-photo">
+                <img src="assets/education-india.jpg" alt="Елизавета Медведева в Индии">
+              </figure>
+            </div>
+          </article>
+        </div>
+        <div class="grid-2" style="margin-top:18px">
+          <article class="card reveal">
+            <h3 data-i18n="additionalEducation">Дополнительное образование</h3>
+            <ul>
+              <li data-i18n="extra1">Альфа-Банк и Финуниверситет «Product owner», 2023</li>
+              <li data-i18n="extra2">МФТИ «Руководитель в области ИИ», 2023</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="intensives">Профессиональные интенсивы</h3>
+            <ul>
+              <li data-i18n="intensive1">Курс лекций МСФО от Б1, 2024</li>
+              <li>Tax Career Sprint от Kept, 2024</li>
+              <li data-i18n="intensive3">ESG Camp от Kept и Экономического факультета МГУ, 2024</li>
+              <li data-i18n="intensive4">Campus Finance: Private Equity & Venture Capital на практике, 2025</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-kicker">04 | Skills</div>
+          <div></div>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+              <h3 data-i18n="hardSkills">Профессиональные навыки</h3>
+            <div class="pill-list">
+              <span class="pill" data-i18n="skillFinancial">Финансовый анализ</span>
+              <span class="pill" data-i18n="skillQuant">Количественные методы</span>
+              <span class="pill" data-i18n="skillCorp">Корпоративные финансы</span>
+              <span class="pill" data-i18n="skillMacro">Макроэкономическое прогнозирование</span>
+              <span class="pill" data-i18n="skillInvestment">Инвестиционный анализ</span>
+              <span class="pill" data-i18n="skillEsg">ESG-анализ</span>
+            </div>
+          </article>
+          <article class="card reveal">
+              <h3 data-i18n="analyticalSkills">Аналитические навыки</h3>
+            <div class="pill-list">
+              <span class="pill" data-i18n="analyticalData">Структуризация данных</span>
+              <span class="pill" data-i18n="analyticalViz">Визуализация аналитики</span>
+              <span class="pill" data-i18n="analyticalBigData">Работа с большими объемами данных</span>
+              <span class="pill" data-i18n="analyticalReports">Исследовательские отчеты</span>
+            </div>
+          </article>
+          <article class="card reveal">
+              <h3 data-i18n="toolsTitle">Инструменты</h3>
+            <div class="pill-list">
+              <span class="pill">MS Office</span>
+              <span class="pill">MS Excel</span>
+              <span class="pill">MS PowerPoint</span>
+              <span class="pill">MS Word</span>
+              <span class="pill">Power BI</span>
+              <span class="pill">Orange</span>
+              <span class="pill">Statistica</span>
+              <span class="pill">RStudio</span>
+              <span class="pill">Консультант Плюс</span>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="languagesTitle">Языки</h3>
+            <p data-i18n="englishLevel">Английский: Upper-Intermediate</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-kicker">05 | Research</div>
+          <div>
+            <h2 data-i18n="researchTitle">Исследования и публикации</h2>
+          </div>
+        </div>
+        <div class="publication-list reveal">
+          <details open>
+            <summary>Scopus</summary>
+            <ol>
+              <li><a href="https://www.e3s-conferences.org/articles/e3sconf/abs/2024/04/e3sconf_icite2023_02024/e3sconf_icite2023_02024.html" target="_blank" rel="noopener">ESG-company rating as a pass to a Smart City</a></li>
+            </ol>
+          </details>
+          <details>
+            <summary data-i18n="vakPublications">ВАК</summary>
+            <ol>
+              <li><a href="https://maginnov.ru/ru/zhurnal/arhiv/2022/innovacii-n1-2022/prognoz-ispolzovaniya-vodoroda-v-kontekste-zelenoj-povestki-ekonomiki" target="_blank" rel="noopener">Прогноз использования водорода в контексте зеленой повестки экономики</a></li>
+              <li><a href="http://www.intereconom.com/component/content/article/478.html" target="_blank" rel="noopener">Выявление особенностей форсайт-технологий воспитательных практик для формирования компетентностной парадигмы в развитии молодежи</a></li>
+              <li><a href="http://www.fa.ru/org/div/edition/enp/journals/2024%20№4.pdf" target="_blank" rel="noopener">Прогнозирование изменений на российском рынке труда в сфере информационных технологий до 2029 года</a></li>
+              <li><a href="https://rusjm.ru/ru/nauka/article/84985/view" target="_blank" rel="noopener">Пути повышения конкурентоспособности металлургического комплекса России</a></li>
+              <li><a href="https://innovazia.ru/archive/?ELEMENT_ID=60318" target="_blank" rel="noopener">Оценка влияния цифровой среды и ESG-трансформации экономики на развитие российских высокотехнологичных компаний</a></li>
+              <li><a href="https://innovazia.ru/upload/iblock/fe7/kuabkvxcw4pwu1xyrxg78lv8ykkweo4j/№3%202025%20ИиИ.pdf" target="_blank" rel="noopener">Влияние ESG-рейтингов на инвестиционную привлекательность компаний металлургического сектора</a></li>
+              <li><a href="https://elibrary.ru/item.asp?id=80372877" target="_blank" rel="noopener">Развитие человеческого капитала в цифровой экономике: вызовы и возможности</a></li>
+              <li><a href="https://elibrary.ru/item.asp?id=82616564" target="_blank" rel="noopener">Киберриски российских цифровых экосистем</a></li>
+              <li><a href="https://elibrary.ru/item.asp?edn=rxipdv" target="_blank" rel="noopener">Корпоративное управление в контексте ESG-повестки: отраслевые рейтинги компаний</a></li>
+              <li><a href="https://elibrary.ru/item.asp?id=82335094" target="_blank" rel="noopener">Методы оценки аспекта корпоративного управления в общей ESG-концепции</a></li>
+            </ol>
+          </details>
+          <details>
+            <summary data-i18n="rincPublications">РИНЦ</summary>
+            <ol>
+              <li><a href="https://www.elibrary.ru/item.asp?id=54094870" target="_blank" rel="noopener">Доля инвестиций, направленных на реконструкцию и модернизацию в общем объеме инвестиций в основной капитал</a></li>
+              <li><a href="https://elibrary.ru/item.asp?id=47568282" target="_blank" rel="noopener">Рынок e-commerce в России: особенности развития и влияние на инвестиционную привлекательность компаний</a></li>
+              <li><a href="https://elibrary.ru/item.asp?id=47381836" target="_blank" rel="noopener">Водород как основа нового энергоперехода</a></li>
+              <li><a href="https://elibrary.ru/item.asp?id=50770947" target="_blank" rel="noopener">Философия авангарда В.В. Кандинского</a></li>
+              <li><a href="https://fiojournal.ru/journal/article.php?id=2224" target="_blank" rel="noopener">Немецкая музыка XVIII века. Творчество Баха</a></li>
+              <li><a href="https://elibrary.ru/item.asp?id=89066933&pff=1" target="_blank" rel="noopener">Российская модель технологического суверенитета: структура, вызовы и механизмы реализации в условиях санкционного давления</a></li>
+              <li><a href="https://af.unecon.ru/files/arhitektura_2024.pdf" target="_blank" rel="noopener">Строительный бизнес России и Китая: новые точки роста</a></li>
+              <li><a href="https://af.unecon.ru/files/arhitektura_2025.pdf" target="_blank" rel="noopener">Моделирование финансовой результативности корпорации в целях оценки влияния нефинансовой информации на примере ПАО «Северсталь»</a></li>
+            </ol>
+          </details>
+          <details>
+            <summary data-i18n="otherPublications">Другие издания</summary>
+            <ol>
+              <li><a href="https://elibrary.ru/item.asp?id=53805474" target="_blank" rel="noopener">Информационное обеспечение государственного управления: проблемы и решения</a></li>
+            </ol>
+          </details>
+        </div>
+        <div class="context-gallery research reveal" aria-label="Фотографии с конференций и исследовательских выступлений">
+          <figure class="context-photo">
+            <img src="assets/publications-defense.jpg" alt="Елизавета Медведева выступает с исследованием">
+            <figcaption class="caption" data-i18n="conferenceDefense">II Всероссийская научно-практическая конференция, Санкт-Петербург, 2024</figcaption>
+          </figure>
+          <figure class="context-photo">
+            <img src="assets/publications-energy-week.jpg" alt="Елизавета Медведева на Energy Week 2022">
+            <figcaption class="caption" data-i18n="conferenceEnergy">Российская энергетическая неделя, 2022</figcaption>
+          </figure>
+          <figure class="context-photo">
+            <img src="assets/startup-village.jpeg" alt="Елизавета Медведева на Startup Village 2026">
+            <figcaption class="caption">Startup Village 2026</figcaption>
+          </figure>
+          <figure class="context-photo">
+            <img src="assets/archipelago-2025.jpg" alt="Елизавета Медведева на Архипелаге 2025">
+            <figcaption class="caption" data-i18n="conferenceArchipelago">Проектно-образовательный интенсив «Архипелаг», 2025</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-kicker">06 | Achievements</div>
+          <div>
+            <h2 data-i18n="achievementsTitle">Достижения вне академического трека</h2>
+          </div>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3 data-i18n="initiativesTitle">Студенческие инициативы</h3>
+            <ul>
+              <li data-i18n="achievement1">Заместитель руководителя Ассоциации волонтеров Лицея НИУ ВШЭ</li>
+              <li data-i18n="achievement2">Руководитель научного отдела Научного студенческого общества Факультета экономики и бизнеса</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="sportTitle">Спорт</h3>
+            <ul>
+              <li data-i18n="sport1">2 взрослый разряд по баскетболу</li>
+              <li data-i18n="sport2">Неоднократное преодоление полумарафонов</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-kicker">07 | Contact</div>
+          <div>
+            <h2 data-i18n="contactTitle">Контакты</h2>
+          </div>
+        </div>
+        <div class="contact-layout">
+          <div class="card reveal">
+            <div class="contact-list">
+              <div class="contact-item"><span data-i18n="phoneLabel">Телефон</span><strong><a href="tel:+79163347325">+7 (916) 334-73-25</a></strong></div>
+              <div class="contact-item"><span>Email</span><strong><a href="mailto:medv.liza70@gmail.com">medv.liza70@gmail.com</a></strong></div>
+              <!-- EDIT: при необходимости замените Telegram username. -->
+              <div class="contact-item"><span>Telegram</span><strong><a href="https://t.me/mediza_11">@mediza_11</a></strong></div>
+            </div>
+            <div class="button-row" style="margin-top:24px">
+              <a class="btn primary" href="https://t.me/mediza_11" data-i18n="telegramButton">Написать в Телеграм</a>
+              <a class="btn" href="#top" data-i18n="topButton">Наверх</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Елизавета Медведева</span>
+      <span>Finance, analytics, strategy & research</span>
+    </div>
+  </footer>
+
+  <!--
+    Deployment:
+    1. Сохранить файл как index.html
+    2. Положить рядом с index.html фотографии
+    3. Загрузить index.html и фотографии на GitHub Pages / Netlify / Vercel
+    4. Получить публичную ссылку
+  -->
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('#navLinks');
+    const links = [...document.querySelectorAll('.nav-links a')];
+    const langButton = document.querySelector('.lang-button');
+    const langMenu = document.querySelector('.lang-menu');
+    const langOptions = [...document.querySelectorAll('[data-lang-option]')];
+
+    const translations = {
+      ru: {
+        navAbout: 'Обо мне',
+        navExperience: 'Опыт',
+        navEducation: 'Образование',
+        navPublications: 'Публикации',
+        navContact: 'Контакты',
+        personName: 'Елизавета Медведева',
+        eyebrow: 'Finance | Analytics | Strategy',
+        lead: 'Ведущий специалист на стыке аналитики, внедрения технологий, финансов и бизнес-исследований.',
+        statMaster: 'магистратура в Финансовом университете',
+        statRole: 'ведущий специалист в Газпромбанке',
+        statEsgTitle: 'ESG и инноватика',
+        statEsg: 'исследования и публикации',
+        interestsTitle: 'Профессиональные интересы',
+        interestsText: 'Финансовый анализ, бизнес-аналитика, стратегия, корпоративные финансы, ESG, инноватика, технологические решения и высокотехнологичные компании.',
+        strengthsTitle: 'Сильные стороны',
+        strengthsText: 'Структурирование данных, аккуратная визуализация выводов, исследовательская логика, работа с международной повесткой и сложными материалами.',
+        styleTitle: 'Рабочий стиль',
+        styleText: 'Системный подход, внимание к деталям, умение соединять финансовую, стратегическую и коммуникационную части проекта.',
+        gpbTitle: 'АО «Газпромбанк»',
+        gpbRole: 'Департамент аналитики и внедрения технологий, Центр развития технологических проектов, ведущий специалист',
+        gpbPoint1: 'Участие в поиске технологических решений под запрос бизнес-заказчиков Банка: скаутинг',
+        gpbPoint2: 'Участие в отборе и оценке решений для пилотирования в Банке',
+        cityTitle: 'ООО «Городские события»',
+        cityRole: 'Бизнес-ассистирование компаний перспективного портфеля Фонда НТИ',
+        cityPoint1: 'Структуризация данных, формирование выводов и визуальное оформление аналитических отчетов по компаниям программы акселерации в рамках Архипелага 2025',
+        cityPoint2: 'Помощь в составлении финансовой модели, бизнес-модели, требований и условий Фонда, дорожной карты и презентационных материалов для инвестфорума',
+        cityPoint3: 'Организация нетворкинга компаний, проектировочных и пленарных сессий',
+        fuPoint1: 'Составление отчета и апробация исследования «Форсайт-технологии в воспитательных практиках»',
+        fuPoint2: 'Составление отчета и апробация исследования «Оценка уровня раскрытия ESG для компаний»',
+        h2Point1: 'Ведение проектной документации: разработка устава проекта, подготовка презентаций',
+        h2Point2: 'Формирование mind map для структуризации ресурсов и вех проекта',
+        h2Point3: 'Создание системы контроля и выполнения сроков',
+        ibPoint1: 'Запись и редакция письменных материалов с международных конференций',
+        ibPoint2: 'Дизайн иностранных материалов в MS Word',
+        educationTitle: 'Финансовое образование с международным контуром',
+        financialUniversity: 'Финансовый университет при Правительстве Российской Федерации',
+        master: 'Магистратура',
+        masterFaculty: 'Факультет налогов, аудита и бизнес-анализа',
+        masterProgram: 'Программа: «Анализ и стратегический менеджмент в бизнесе»',
+        bachelor: 'Бакалавриат',
+        bachelorFaculty: 'Факультет экономики и бизнеса',
+        bachelorProgram: 'Программа: «Корпоративные финансы и бизнес-аналитика» с частичной реализацией на английском языке',
+        additionalEducation: 'Дополнительное образование',
+        intensives: 'Профессиональные интенсивы',
+        extra1: 'Альфа-Банк и Финуниверситет «Product owner», 2023',
+        extra2: 'МФТИ «Руководитель в области ИИ», 2023',
+        intensive1: 'Курс лекций МСФО от Б1, 2024',
+        intensive3: 'ESG Camp от Kept и Экономического факультета МГУ, 2024',
+        intensive4: 'Campus Finance: Private Equity & Venture Capital на практике, 2025',
+        hardSkills: 'Профессиональные навыки',
+        analyticalSkills: 'Аналитические навыки',
+        toolsTitle: 'Инструменты',
+        languagesTitle: 'Языки',
+        englishLevel: 'Английский: Upper-Intermediate',
+        skillFinancial: 'Финансовый анализ',
+        skillQuant: 'Количественные методы',
+        skillCorp: 'Корпоративные финансы',
+        skillMacro: 'Макроэкономическое прогнозирование',
+        skillInvestment: 'Инвестиционный анализ',
+        skillEsg: 'ESG-анализ',
+        analyticalData: 'Структуризация данных',
+        analyticalViz: 'Визуализация аналитики',
+        analyticalBigData: 'Работа с большими объемами данных',
+        analyticalReports: 'Исследовательские отчеты',
+        researchTitle: 'Исследования и публикации',
+        vakPublications: 'ВАК',
+        rincPublications: 'РИНЦ',
+        otherPublications: 'Другие издания',
+        conferenceDefense: 'II Всероссийская научно-практическая конференция, Санкт-Петербург, 2024',
+        conferenceEnergy: 'Российская энергетическая неделя, 2022',
+        conferenceArchipelago: 'Проектно-образовательный интенсив «Архипелаг», 2025',
+        achievementsTitle: 'Достижения вне академического трека',
+        initiativesTitle: 'Студенческие инициативы',
+        sportTitle: 'Спорт',
+        achievement1: 'Заместитель руководителя Ассоциации волонтеров Лицея НИУ ВШЭ',
+        achievement2: 'Руководитель научного отдела Научного студенческого общества Факультета экономики и бизнеса',
+        sport1: '2 взрослый разряд по баскетболу',
+        sport2: 'Неоднократное преодоление полумарафонов',
+        contactTitle: 'Контакты',
+        phoneLabel: 'Телефон',
+        telegramButton: 'Написать в Телеграм',
+        topButton: 'Наверх'
+      },
+      en: {
+        navAbout: 'About',
+        navExperience: 'Experience',
+        navEducation: 'Education',
+        navPublications: 'Publications',
+        navContact: 'Contacts',
+        personName: 'Elizaveta Medvedeva',
+        eyebrow: 'Finance | Analytics | Strategy',
+        lead: 'Lead specialist at the intersection of analytics, technology implementation, finance, and business research.',
+        statMaster: 'Master’s program at the Financial University',
+        statRole: 'Lead specialist at Gazprombank',
+        statEsgTitle: 'ESG and innovation',
+        statEsg: 'research and publications',
+        interestsTitle: 'Professional interests',
+        interestsText: 'Financial analysis, business analytics, strategy, corporate finance, ESG, innovation, technology solutions, and high-tech companies.',
+        strengthsTitle: 'Strengths',
+        strengthsText: 'Data structuring, clear analytical visualization, research logic, international context, and work with complex materials.',
+        styleTitle: 'Working style',
+        styleText: 'Systematic approach, attention to detail, and ability to connect financial, strategic, and communication parts of a project.',
+        gpbTitle: 'Gazprombank',
+        gpbRole: 'Analytics and Technology Implementation Department, Technology Project Development Center, Lead Specialist',
+        gpbPoint1: 'Searching for technology solutions for internal business customers: scouting',
+        gpbPoint2: 'Participating in selection and evaluation of solutions for bank pilots',
+        cityTitle: 'Urban Events LLC',
+        cityRole: 'Business assistance for companies in the prospective portfolio of the NTI Fund',
+        cityPoint1: 'Structuring data, forming conclusions, and visually designing analytical reports for accelerator companies at Archipelago 2025',
+        cityPoint2: 'Supporting financial models, business models, fund requirements, roadmaps, and investor forum presentation materials',
+        cityPoint3: 'Organizing company networking, design sessions, and plenary sessions',
+        fuPoint1: 'Preparing and testing the research report “Foresight technologies in educational practices”',
+        fuPoint2: 'Preparing and testing the research report “Assessment of ESG disclosure levels for companies”',
+        h2Point1: 'Maintaining project documentation: project charter development and presentation preparation',
+        h2Point2: 'Creating mind maps to structure project resources and milestones',
+        h2Point3: 'Creating a system for deadline control and execution tracking',
+        ibPoint1: 'Recording and editing written materials from international conferences',
+        ibPoint2: 'Designing international materials in MS Word',
+        educationTitle: 'Financial education with an international track',
+        financialUniversity: 'Financial University under the Government of the Russian Federation',
+        master: 'Master’s degree',
+        masterFaculty: 'Faculty of Taxes, Audit and Business Analysis',
+        masterProgram: 'Program: Analysis and Strategic Management in Business',
+        bachelor: 'Bachelor’s degree',
+        bachelorFaculty: 'Faculty of Economics and Business',
+        bachelorProgram: 'Program: Corporate Finance and Business Analytics, partly taught in English',
+        additionalEducation: 'Additional education',
+        intensives: 'Professional intensives',
+        extra1: 'Alfa-Bank and Financial University, Product Owner, 2023',
+        extra2: 'MIPT, AI Manager, 2023',
+        intensive1: 'IFRS lecture course by B1, 2024',
+        intensive3: 'ESG Camp by Kept and the Faculty of Economics, Moscow State University, 2024',
+        intensive4: 'Campus Finance: Private Equity & Venture Capital in practice, 2025',
+        hardSkills: 'Professional skills',
+        analyticalSkills: 'Analytical skills',
+        toolsTitle: 'Tools',
+        languagesTitle: 'Languages',
+        englishLevel: 'English: Upper-Intermediate',
+        skillFinancial: 'Financial analysis',
+        skillQuant: 'Quantitative methods',
+        skillCorp: 'Corporate finance',
+        skillMacro: 'Macroeconomic forecasting',
+        skillInvestment: 'Investment analysis',
+        skillEsg: 'ESG analysis',
+        analyticalData: 'Data structuring',
+        analyticalViz: 'Analytics visualization',
+        analyticalBigData: 'Large data set analysis',
+        analyticalReports: 'Research reports',
+        researchTitle: 'Research and publications',
+        vakPublications: 'Peer-reviewed journals',
+        rincPublications: 'Russian Science Citation Index',
+        otherPublications: 'Other publications',
+        conferenceDefense: 'II All-Russian Scientific and Practical Conference, Saint Petersburg, 2024',
+        conferenceEnergy: 'Russian Energy Week, 2022',
+        conferenceArchipelago: 'Project-based educational intensive “Archipelago”, 2025',
+        achievementsTitle: 'Achievements beyond academics',
+        initiativesTitle: 'Student initiatives',
+        sportTitle: 'Sport',
+        achievement1: 'Deputy Head of the Volunteer Association of the HSE Lyceum',
+        achievement2: 'Head of the Research Department of the Student Scientific Society, Faculty of Economics and Business',
+        sport1: 'Second adult basketball rank',
+        sport2: 'Multiple half-marathon finishes',
+        contactTitle: 'Contacts',
+        phoneLabel: 'Phone',
+        telegramButton: 'Message on Telegram',
+        topButton: 'Back to top'
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.dataset.i18n;
+        if (translations[lang][key]) element.textContent = translations[lang][key];
+      });
+      langButton.textContent = lang.toUpperCase();
+      langOptions.forEach(option => option.classList.toggle('active', option.dataset.langOption === lang));
+      localStorage.setItem('siteLanguage', lang);
+    }
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    langButton.addEventListener('click', () => {
+      const isOpen = langMenu.classList.toggle('open');
+      langButton.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    langOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        setLanguage(option.dataset.langOption);
+        langMenu.classList.remove('open');
+        langButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.lang-switch')) {
+        langMenu.classList.remove('open');
+        langButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const sections = [...document.querySelectorAll('section[id]')];
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+        });
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach(section => navObserver.observe(section));
+
+    setLanguage(localStorage.getItem('siteLanguage') || 'ru');
+  </script>
+</body>
+</html>
